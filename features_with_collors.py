@@ -10,6 +10,11 @@ collors = {
 
 
 def inputInt(txt):
+    """
+    A function that will validate weather a number is integer, or not.
+    :param txt: The text to be shown just like the standard input
+    :return: A callable constant as an integer number.
+    """
     while True:
         number = str(input(txt)).strip()
         if number.strip() == '' or number.isalpha():
@@ -20,6 +25,11 @@ def inputInt(txt):
 
 
 def fileCheck(file):
+    """
+    It checks if the file, given as the parameter file, already exists or not.
+    If there's no such file, it creates a new one, called as the same parameter name given.
+    :param file: The file to be checked
+    """
     try:
         file_manager = open(file, 'rt')
     except FileNotFoundError:
@@ -30,6 +40,10 @@ def fileCheck(file):
 
 
 def newBook(file):
+    """
+    Made by two basic inputs, it will be given as input the name and age, and it will add on the file given as parameter.
+    :param file: The file to be worked.
+    """
     print(f'{collors["purple"]}New book: {collors["end"]}')
     while True:
         name = input('Type the name: ').strip().title()
@@ -48,6 +62,10 @@ def newBook(file):
 
 
 def printList(file):
+    """
+    Read the file given, and print the components of it, in a formatted way.
+    :param file: file to be read.
+    """
     print(f'{collors["yellow"]}Loading list...{collors["end"]}')
     sleep(1)
     print('-' * 40)
@@ -63,6 +81,12 @@ def printList(file):
 
 
 def mainMenu(file):
+    """
+    Show a menu on the screen, giving the options that you have. After you chose an option, it will unchain a distinct
+    block of code, from 1 to 3.
+    As shown, 1 to book a new person, 2 to show the booked list and 3 to leave.
+    :param file: file to be worked.
+    """
     while True:
         print('-' * 40)
         print('Main menu: '.center(40))
@@ -84,8 +108,3 @@ def mainMenu(file):
         if cmd == 3:
             print(f'{collors["green"]}See you soon!{collors["end"]}')
             break
-
-
-
-
-
