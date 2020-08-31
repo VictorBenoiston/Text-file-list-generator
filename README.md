@@ -2,7 +2,7 @@
 <h3>English:</h3>
  A script that creates (if it doesnt' exist) a text file, and can be filled with information about people.
  I'll provide two versions, one for pyCharm with collors on the terminal, and another one with no collors.
- At the begining, it only take name, and age.
+ At the begining, it only take name, and age of each person. 
  Be free to add more commands, and make some pull requests!
 
 <h3>Português:</h3>
